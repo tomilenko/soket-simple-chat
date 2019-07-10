@@ -28,14 +28,17 @@ io.on("connection", function(socket: any) {
 
 app.get("/data", (req: any, res: any) => {
     console.log("/data");
+    res.send('data');
 });
 
 app.get("/api", (req: any, res: any) => {
     console.log("/api");
+    res.send('api');
 });
 
 app.get("/chats", (req: any, res: any) => {
     console.log("/chats");
+    res.send('chats');
 });
 
 const server = http.listen(Config.port, function() {

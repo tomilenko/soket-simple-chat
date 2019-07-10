@@ -7,15 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  <button onClick="sendMsg()">Hit Me</button>
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
   <script>
     const socket = io("http://localhost:3333");
-    function sendMsg() {
-      socket.emit("message", "HELLO WORLD");
-    }
-
     socket.on("message", function (data) {
       console.log(data);
     });
@@ -28,7 +23,7 @@
         $('#m').val('');
         return false;
       });
-      
+
       socket.on('message', function (msg) {
         $('#messages').append($('<li>').text(msg));
       });
