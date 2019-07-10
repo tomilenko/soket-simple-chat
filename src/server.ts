@@ -26,6 +26,18 @@ io.on("connection", function(socket: any) {
   });
 });
 
+app.get("/data", (req: any, res: any) => {
+    console.log("/data");
+});
+
+app.get("/api", (req: any, res: any) => {
+    console.log("/api");
+});
+
+app.get("/chats", (req: any, res: any) => {
+    console.log("/chats");
+});
+
 const server = http.listen(Config.port, function() {
   console.log(`listening on *:${Config.port}`);
 });

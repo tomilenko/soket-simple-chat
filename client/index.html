@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Document</title>
 </head>
-
 <body>
   <button onClick="sendMsg()">Hit Me</button>
   <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
   <script>
     const socket = io("http://localhost:3333");
-
     function sendMsg() {
       socket.emit("message", "HELLO WORLD");
     }
@@ -31,6 +28,7 @@
         $('#m').val('');
         return false;
       });
+      
       socket.on('message', function (msg) {
         $('#messages').append($('<li>').text(msg));
       });
@@ -40,7 +38,5 @@
   <form action="">
     <input id="m" autocomplete="off" /><button>Send</button>
   </form>
-
 </body>
-
 </html>
