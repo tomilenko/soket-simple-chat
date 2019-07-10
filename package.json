@@ -1,0 +1,18 @@
+{
+  "name": "socket-simple-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.0.12",
+    "types": "^0.1.1",
+    "typescript": "^3.5.2"
+  }
+}
